@@ -13,16 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+from django.urls import include, path
 from django.contrib import admin
-from django.urls import path
+from catalog import views
 
 urlpatterns = [
-   path('catalog', 'catalog.urls'),
+   #path('SBTechList', include('SBTechList.urls')),
+   path('admin/', admin.site.urls),
 ]
 # path('admin/', admin.site.urls),
 
-#Add URL maps to redirect the base URL to our application
+"""
+Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path(r'^$', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
+"""
