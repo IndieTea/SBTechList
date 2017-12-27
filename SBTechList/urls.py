@@ -17,5 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+   path('catalog', 'catalog.urls'),
+]
+# path('admin/', admin.site.urls),
+
+#Add URL maps to redirect the base URL to our application
+from django.views.generic import RedirectView
+urlpatterns += [
+    path(r'^$', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
