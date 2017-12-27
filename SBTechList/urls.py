@@ -19,7 +19,7 @@ from django.contrib import admin
 from catalog import views
 
 urlpatterns = [
-   #path('SBTechList', include('SBTechList.urls')),
+   path('SBTechList', include('SBTechList.urls')),
    path('admin/', admin.site.urls),
 ]
 # path('admin/', admin.site.urls),
