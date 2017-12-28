@@ -16,13 +16,12 @@ Including another URLconf
 
 from django.urls import include, path
 from django.contrib import admin
-from catalog import views
+
 
 urlpatterns = [
-   path('SBTechList', include('SBTechList.urls')),
+   path('catalog/', include('catalog.urls')),
    path('admin/', admin.site.urls),
 ]
-# path('admin/', admin.site.urls),
 
 """
 Add URL maps to redirect the base URL to our application
