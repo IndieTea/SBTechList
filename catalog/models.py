@@ -113,6 +113,7 @@ class DjangoSession(models.Model):
 
 
 class Sbtechlist(models.Model):
+	#id=models.IntegerField(primary_key=True)
     organization = models.CharField(max_length=100)
     cat = models.CharField(max_length=500)
     description = models.CharField(max_length=2000)
@@ -125,7 +126,7 @@ class Sbtechlist(models.Model):
     founded = models.IntegerField()
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'sbtechlist'
 
 '''
