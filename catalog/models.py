@@ -128,6 +128,9 @@ class Sbtechlist(models.Model):
     class Meta:
         #managed = False
         db_table = 'sbtechlist'
+        ordering = ['employees', 'organization']
+
+    #add methods here
 
 '''
 class sbtechlist(models.MODEL):
