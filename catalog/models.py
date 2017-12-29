@@ -1,3 +1,5 @@
+from datetime import datetime
+import datetime
 from django.db import models
 
 # Create your models here.
@@ -113,7 +115,6 @@ class DjangoSession(models.Model):
 
 
 class Sbtechlist(models.Model):
-	#id=models.IntegerField(primary_key=True)
     organization = models.CharField(max_length=100)
     cat = models.CharField(max_length=500)
     description = models.CharField(max_length=2000)
@@ -124,24 +125,24 @@ class Sbtechlist(models.Model):
     zipcode = models.IntegerField()
     employees = models.IntegerField()
     founded = models.IntegerField()
+    #id = models.AutoField(primary_key=True)
 
     class Meta:
-        #managed = False
+        managed = False
         db_table = 'sbtechlist'
         ordering = ['employees', 'organization']
 
     #add methods here
+    def __str__(self):
+        #String for representing the Model object.
+        return self.Sbtechlist_text
+    	#def to display the
+     '''
+    def get_website_url(:
+    	return url to access particular organization
+    	 return reverse(('sbtechlist-detail', args=[str(self.id)]))
 
-'''
-class sbtechlist(models.MODEL):
-	organization = models.CharField(max_length=100)
-	type1 = models.CharField(max_length=500)
-	description = models.CharField(max_length=2000)
-	sebsite = models.CharField(max_length=500)
-	address = models.CharField(max_length=200)
-	city = models.CharField(max_length=50)
-	state = models.CharField(max_length=10)
-	zipcode = models.IntegerField()
-	employees = models.IntegerField()
-	founded = models.IntegerField()
-	'''
+
+
+
+

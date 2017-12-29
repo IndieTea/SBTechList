@@ -16,8 +16,7 @@ Including another URLconf
 
 from django.urls import include, path
 from django.contrib import admin
-from django.views.generic import RedirectView
-from . import views
+from catalog import views
 
 
 urlpatterns = [
@@ -26,7 +25,7 @@ urlpatterns = [
 ]
 
 """
-Add URL maps to redirect the base URL to our application
+Add URL maps to redirect the base URL to our application DURING DEVELOPMENT
 
 urlpatterns += [
     path('^$', RedirectView.as_view(url='/catalog/', permanent=True)),
