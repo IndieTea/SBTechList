@@ -1,6 +1,7 @@
-from datetime import datetime
 import datetime
 from django.db import models
+
+from django.utils import timezone
 
 # Create your models here.
 
@@ -137,10 +138,7 @@ class Sbtechlist(models.Model):
         #String for representing the Model object.
         return self.Sbtechlist_text
     	#def to display the
-     '''
-    def get_website_url(:
-    	return url to access particular organization
-    	 return reverse(('sbtechlist-detail', args=[str(self.id)]))
+
 
 
 
