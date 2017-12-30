@@ -25,14 +25,20 @@
         </header>
 
         <div id="List">
-            <!--
+
             <table>
                 <tr>
-                    <th>Field 1</th>
-                    ...
-                    <th>Field N</th>
+                    <td>Name of Company</td>
+                    <td>Type of Company</td>
+                    <td>Descriptioin</td>
+                    <td>Website</td>
+                    <td>Street Address</td>
+                    <td>City</td>
+                    <td>zipcode</td>
+                    <td>Approximate number of employees</td>
+                    <td>Year Founded</td>
                 </tr>
-                {% for item in query_results %}
+                {% for item in list_Sbtechorgs %}
                 <tr>
                     <td>{{ item.field1 }}</td>
                      ...
@@ -40,7 +46,7 @@
                 </tr>
                     {% endfor %}
                 </table>
-                -->
+
         </div>
 
         <footer>

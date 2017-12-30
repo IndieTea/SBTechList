@@ -18,12 +18,12 @@ from django.urls import include, path
 from django.contrib import admin
 from catalog import views
 
-
+app_name = 'catalog'
 urlpatterns = [
+   path('', views.index, name='index'),
    path('catalog/', include('catalog.urls')),
    path('admin/', admin.site.urls),
-   path('', views.index, name='index'),
-   #path('catalog/templates/index.html', include('index.urls')),
+
 ]
 
 """
