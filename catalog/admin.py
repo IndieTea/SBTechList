@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import Sbtechlist
 
+
+#class Sbtechlist(admin.ModelAdmin)
+
 # Register your models here.
 admin.site.register(Sbtechlist)
 #admin.site.register(AuthGroup)
