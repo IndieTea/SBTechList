@@ -117,7 +117,7 @@ class DjangoSession(models.Model):
 
 class Sbtechlist(models.Model):
     organization = models.CharField(max_length=100)
-    cat = models.CharField(max_length=500)
+    cat = models.CharField(max_length=500) #ManytoManyField
     description = models.CharField(max_length=2000)
     website = models.CharField(max_length=500)
     address = models.CharField(max_length=200)
@@ -131,13 +131,16 @@ class Sbtechlist(models.Model):
     class Meta:
         managed = False
         db_table = 'sbtechlist'
-        ordering = ['employees', 'organization']
+        ordering = ['-employees', 'organization']
 
-    #add methods here
     def __str__(self):
-        #String for representing the Model object.
-        return self.Sbtechlist_text
-    	#def to display the
+    	return self.organization
+
+    """
+    def get_absolute_url(self):
+    #Returns the url to access a particular instance of the model.
+    return reverse('model-detail-view', args=[str(self.id)])
+    """
 
 
 
