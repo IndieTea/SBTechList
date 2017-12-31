@@ -141,3 +141,7 @@ STATICFILES_DIR = {
     os.path.join(BASE_DIR, 'static', 'bootstrap'),
 }
 
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
+
