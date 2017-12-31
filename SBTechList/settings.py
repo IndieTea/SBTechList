@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-#import dj_database_url
+import dj_database_url
 
 #db_from_env = dj_database_url.config()
 #DATABASES['default'].update(db_from_env)
@@ -24,11 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = get_env_variable(['SECRET_KEY']
-SECRET_KEY = '$o+gf!jt5md(9zh^ybs+c+e9n7l4t6e^25)b+zjfj=xj11smm4'
+SECRET_KEY = config('SECRET_KEY')
+#SECRET_KEY = '$o+gf!jt5md(9zh^ybs+c+e9n7l4t6e^25)b+zjfj=xj11smm4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -81,7 +81,11 @@ WSGI_APPLICATION = 'SBTechList.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
