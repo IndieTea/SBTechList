@@ -49,6 +49,12 @@ header {
 
 }
 
+#image {
+	height: 20em;
+	font-size: 0.85em;
+	/*border-bottom: solid 0.05em #7a7a7a;*/
+}
+
 table {
   width: 80%;
   margin-left: auto;
@@ -78,6 +84,7 @@ th.url {
 */
 
 th, td {
+  border-bottom: thin solid;
   padding: 1.2em;
 }
 
