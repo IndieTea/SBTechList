@@ -1,2 +1,2 @@
-web: gunicorn SBTechList.wsgi --log-file -
+web: gunicorn SBTechList.wsgi
 
