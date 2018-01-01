@@ -129,8 +129,6 @@ class Sbtechlist(models.Model):
     #id = models.AutoField(primary_key=True)
 
     class Meta:
-        managed = False
-        db_table = 'sbtechlist'
         ordering = ['-employees', 'organization']
 
     def __str__(self):
