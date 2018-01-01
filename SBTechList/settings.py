@@ -24,11 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ENV['SECRET_KEY']
+SECRET_KEY = os.getenv('SECRET_KEY')
 #SECRET_KEY = '$o+gf!jt5md(9zh^ybs+c+e9n7l4t6e^25)b+zjfj=xj11smm4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(ENV['DEBUG'])
+DEBUG = bool(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS = []
 
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'SBTechList.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.config(
-        default=ENV['DATABASE_URL']
+        default=os.getenv('DATABASE_URL')
     )
 }
 
