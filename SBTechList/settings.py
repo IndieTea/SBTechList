@@ -133,7 +133,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATICFILES_DIR = {
     os.path.join(BASE_DIR, 'static', 'bootstrap'),
 }
-heroku config:set DISABLE_COLLECTSTATIC=0
 
 # Configure Django App for Heroku.
 import django_heroku
