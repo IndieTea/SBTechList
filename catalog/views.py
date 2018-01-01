@@ -11,7 +11,7 @@ def index(request):
 	# view function for home page of the site
 	#generate counts for main objects
 	# return HttpResponse("A list of start ups and businesses based in sunny Santa Barbara, California")
-	list_Sbtechorgs=Sbtechlist.objects.all()
+	list_Sbtechorgs = Sbtechlist.objects.all()
 	# for loop to query and display moved to index.html
 	#for x in Sbtechlist:
 	# 	query_results=Sbtechlist.objects.all()
@@ -20,7 +20,7 @@ def index(request):
 	return render(
 		request,
 		'Sbtechlist/index.html',
-		context={'list_Sbtechorgs':list_Sbtechorgs.values()})
+		context={'list_Sbtechorgs':list_Sbtechorgs})
 
 
 
