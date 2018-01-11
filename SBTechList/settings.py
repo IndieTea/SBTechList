@@ -85,8 +85,11 @@ WSGI_APPLICATION = 'SBTechList.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': '',
-    'USER '
+    'NAME': 'santabarbaratechlist',
+    'USER': 'joyti',
+    'PASSWORD': 'Star9754',
+    'HOST': '127.0.0.1',
+    'PORT': '5432',
     }
 }
 

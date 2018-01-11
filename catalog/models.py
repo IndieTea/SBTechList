@@ -130,6 +130,7 @@ class Sbtechlist(models.Model):
 
     class Meta:
         ordering = ['-employees', 'organization']
+        db_table = 'sbtechlist'
 
     def __str__(self):
     	return self.organization
